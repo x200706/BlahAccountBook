@@ -1,0 +1,63 @@
+*{
+  font-family: 'Noto Sans TC', sans-serif;
+}
+.account-btn{
+  text-align: right;
+}
+.bg-dark {
+    background-color: #ffffff!important;
+}
+.navbar-dark .navbar-brand {
+    color: #4c545d;
+    margin: auto;
+    font-weight: 100;
+}
+.navbar-dark:hover .navbar-brand:hover {
+    color: #434951;
+    margin: auto;
+}
+.navbar-brand:focus {
+    color: #434951;
+    margin: auto;
+}
+a:focus {
+    color: #434951 !important;
+    margin: auto;
+}
+.btn-primary {
+    color: #fff;
+    background: #76a799;
+    border-color:#76a799;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #598277;
+    border-color:#598277;
+}
+.btn-primary:focus {
+    color: #fff;
+    background-color: #598277;
+    border-color:#598277;
+}
+.table-dark {
+    --bs-table-bg: #2c3034;
+    --bs-table-striped-bg: #2c3034;
+    --bs-table-striped-color: #fff;
+    --bs-table-active-bg: #373b3e;
+    --bs-table-active-color: #fff;
+    --bs-table-hover-bg: #323539;
+    --bs-table-hover-color: #fff;
+    color: #fff;
+    border-color: #373b3e;
+}
+.btn-check:focus+.btn, .btn:focus {
+    box-shadow: none !important;
+}
+.btn-check:focus+.btn-primary, .btn-primary:focus {
+    box-shadow: none;
+}
+.btn-close:focus {
+    box-shadow: none;
+}
+/*記得RWD*/
