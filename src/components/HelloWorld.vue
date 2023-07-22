@@ -1,6 +1,10 @@
 <!--之後還想做上鎖功能-->
 <script setup>
+  import IncomeBar from './IncomeBar.vue'
   import CompleteSaveBtn from './CompleteSaveBtn.vue'
+  import ExpenditureBar from './ExpenditureBar.vue'
+  import CurrentMonthPie from './CurrentMonthPie.vue'
+  import TopTenList from './TopTenList.vue'
 </script>
 
 <template>
@@ -12,17 +16,17 @@
 
 <div class="container">
   <div class="row">
-    <div class="col">
-<!--我是左邊-->
-      每月支出<br>
-      每月支出細節
-    </div>
-    <div class="col-6">
+    <div class="col-md-8">
       <!-- Button trigger modal -->
-      總資產
-      總收入
+      <div style="float:left;width:50%">
+        總資產
+      <h1>1500000</h1>
+      </div>
+      <div>總收入
+      <IncomeBar />
+      </div>
 <div class="account-btn"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" align="left">
-  記帳
+<i class="bi bi-plus-lg"></i>
 </button>
   </div>
 
@@ -52,6 +56,7 @@
       <th scope="col">收/支</th>
       <th scope="col">分類</th>
       <th scope="col">金額</th>
+      <th scope="col">操作</th>
     </tr>
   </thead>
   <tbody>
@@ -61,14 +66,66 @@
       <td>支出</td>
       <td>日用品</td>
       <td>70</td>
+      <td>
+        <!--modal-->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1" align="left">
+<i class="bi bi-pencil-square"></i>
+</button>　
+<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal1" align="left">
+  <i class="bi bi-eraser-fill"></i>
+</button>
+</td>
+    </tr>
+        <tr>
+      <td>兔子飼料</td><!--希望飄上去有memo欸-->
+      <td>2023/07/19</td>
+      <td>支出</td>
+      <td>日用品</td>
+      <td>450</td>
+      <td>
+        <!--modal-->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1" align="left">
+<i class="bi bi-pencil-square"></i>
+</button>　
+<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal1" align="left">
+  <i class="bi bi-eraser-fill"></i>
+</button>
+</td>
+    </tr>
+        <tr>
+      <td>咖啡</td><!--希望飄上去有memo欸-->
+      <td>2023/07/19</td>
+      <td>支出</td>
+      <td>飲食</td>
+      <td>90</td>
+      <td>
+        <!--modal-->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1" align="left">
+<i class="bi bi-pencil-square"></i>
+</button>　
+<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal1" align="left">
+  <i class="bi bi-eraser-fill"></i>
+</button>
+</td>
     </tr>
   </tbody>
 </table>
     </div>
-    <div class="col">
+    <div class="col-md-4">
 <!--我是右邊-->
-      總支出分布<br>
-      開銷Top10
+<details open>
+  <summary>每月支出</summary>
+  <ExpenditureBar />
+</details>
+<!--每月支出細節-->
+<details open>
+  <summary>當月支出分布</summary>
+  <CurrentMonthPie />
+</details >
+<details open>
+  <summary>開銷Top10</summary>
+  <TopTenList />
+</details>
     </div>
   </div>
 </div>
