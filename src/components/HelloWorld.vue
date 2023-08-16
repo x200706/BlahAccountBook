@@ -1,10 +1,12 @@
 <!--之後還想做上鎖功能-->
 <script setup>
+  import TotalAssets from './TotalAssets.vue'
   import IncomeBar from './IncomeBar.vue'
   import CompleteSaveBtn from './CompleteSaveBtn.vue'
   import ExpenditureBar from './ExpenditureBar.vue'
   import CurrentMonthPie from './CurrentMonthPie.vue'
   import TopTenList from './TopTenList.vue'
+
 </script>
 
 <template>
@@ -20,7 +22,7 @@
       <!-- Button trigger modal -->
       <div style="float:left;width:50%">
         總資產
-      <h1>1500000</h1>
+      <h1><TotalAssets /></h1>
       </div>
       <div>總收入
       <IncomeBar />
